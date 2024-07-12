@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+string removeDuplicate(string s){
+    
+    
+    // your code goes here
+    for(long unsigned int i=0;i<s.length();i++)
+  s.erase( remove(s.begin()+i+1,s.end(),s[i]),s.end());
+  //remove
+  //remove picks all the occurance of character s[i] character and places them
+  //at the end of array, then returns iterator to the new end, one past the element not removed, then we erase those dupilcate characters
+  sort(s.begin(),s.end());
+    return s;
+}
